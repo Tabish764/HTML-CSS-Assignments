@@ -1,0 +1,712 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+:root {
+    --accent-color: #d53c3a;
+    --primary-color: rgb(0, 0, 0);
+    --secondary-color: rgb(0, 0, 0);
+    --text-color: #ffffff;
+    --secondary-text-color: #000000;
+    --main: rgb(81, 0, 255);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Poppins';
+    font-size: 14pt;
+    color: var(--text-color);
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--primary-color);
+}
+.logo{
+    width: 150px;
+    border-radius: 1001px;
+    margin-right:auto ;
+}
+nav {
+ 
+    height: 100px;
+    background-color: black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  margin-bottom: 50px;
+    position: sticky;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    z-index: 1000; 
+}
+nav .home-link {
+    margin-right: auto;
+}
+.links-container{
+   
+    
+  
+    margin-right: 80px;
+    flex-grow: 1;
+}
+.links-container li:first-child{
+    margin-right: auto;
+}
+.links-container ul {
+    list-style: none;
+    display: flex;
+    gap: 36px;
+    justify-content: center;
+    align-items: center;
+}
+.links-container ul li:first-child{
+    margin-right: auto;
+}
+.links-container img{
+    width: 80px;
+    background-color: black;
+    border: 2px solid var(--main);
+    border-radius: 1001px;
+}
+.links-container a {
+    
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    transition: color 0.5s ease;
+}
+
+.links-container a::after {
+    position: absolute;
+    content: '';
+    background-color: var(--main);
+    width: 0; 
+    height: 2px; 
+    bottom: 0; 
+    left: 0;
+    transition: width 0.3s ease; 
+}
+
+.links-container a:hover::after {
+    width: 100%;
+}
+.links-container #logo:hover::after{
+    width: 0;
+}
+.links-container a:hover {
+    color: var(--main); 
+}
+#sidebar-active{
+    display: none;
+}
+.open-sidebar-button,.close-sidebar-button{
+   
+    display: none;
+}
+header {
+    padding: 0px 0px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-grow: 1;
+  
+   
+}
+
+header .container {
+    width: 600px;
+    max-width: 100%;
+  
+    
+}
+
+header img {
+    background-color: black;
+    padding: 20px;
+    margin-bottom: 10px;
+   width: 390px;
+   max-width: 30%;
+    box-shadow:  0 0 50px var(--main);
+    border-radius: 50%;;
+    border: 2px solid var(--main);
+    transition: 0.4s ease-in-out;
+
+  &:hover{
+    box-shadow: 0 0 70px var(--main);
+  transform: scale(1.02);
+  }
+    
+}
+span{
+    color: var(--main);
+   
+   
+    
+}
+
+header h1 {
+    margin-top: 4px;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+header h2 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    
+}
+
+header p {
+    color: var(--secondary-text-color-color);
+    font-size: 1rem;
+    font-size: 0.9rem;
+}
+
+header .read-more {
+    display: inline-block;
+   border: 2px solid var(--main);
+    color: var(--main);
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 1000px;
+    padding: .3em 1.15em;
+    text-decoration: none;
+    margin-bottom: 80px;
+    transition: 600ms ease;
+    margin-top: 30px;
+}
+
+header .read-more:hover {
+    background-color:var(--main);
+    color: black;
+    box-shadow: 0 0 20px var(--main);
+}
+.social-container{
+    display: flex;
+    gap: 30px;
+   
+    flex-wrap: wrap;
+    
+  
+}
+.social-container a {
+    fill: var(--main);
+    border-radius: 50%;
+    height: 54px;
+    width: 54px;
+    box-sizing: border-box;
+    transition: 0.4s;
+    border: 2px solid var(--main);
+    display: flex;
+    justify-content: center; 
+    align-items: center;      
+}
+
+.social-container a:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 0 15px var(--main), 0 0 30px var(--main), 0 0 60px var(--main); /* Increased glow effect */
+    background-color: var(--main);
+    fill: black;
+}
+
+svg {
+    width: 28px; 
+    height: 28px; 
+  
+}
+
+#skill-section{
+    background-color: rgb(22, 22, 22);
+    padding: 80px 20px 150px 20px;
+}
+#skill-section h2{
+    font-size: 4rem;
+    text-align: center;
+}
+.skill-section .wrapper{
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+.skill-container{
+   width: 100%;
+    max-width: 100%;
+ 
+ 
+}
+.skill-container ul {
+    list-style: none;
+    margin: 10px 0;
+
+}
+.skill-container ul li{
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+    
+    
+}
+progress {
+    width: 60%; 
+    height: 15px; 
+}
+
+
+
+
+
+
+
+progress[value] {
+    background-color: transparent;
+    border-radius: 10px; /* Ensure background is transparent */
+}
+
+progress[value]::-webkit-progress-value {
+    background-color: var(--main); /* Change this to your desired color */
+}
+.project-section{
+    padding: 60px 20px 100px 20px;
+    
+}
+.project-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 90px;
+    justify-content: center;
+   
+}
+.project1{
+    margin-top: 40px;
+    background-color: rgb(35, 35, 35);
+    width: 360px;
+    height: 460px;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    transition: 0.3s ease-in-out;
+    position: relative;
+    
+   
+}
+@property --angle{
+    syntax :'<angle>';
+    initial-value: 0deg;
+    inherits:false;
+}
+.project1::after, .project::before{
+    --angle: 0deg;
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 70%,var(--main));
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 10px;
+    box-shadow:  0 0 5px var(--main);
+    animation: 4s spin linear infinite;
+}
+@keyframes spin{
+    from {
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+}
+
+.project-section h1{
+text-align: center;
+font-size: 4rem;
+}
+.project1 h1{
+
+    font-size: 2.3rem;
+    
+}
+.project1 p{
+  
+    font-size: 1.3rem;
+}
+
+.project1 a{
+    text-decoration: none;
+    color: var(--main);
+ 
+    padding: 10px 20px 10px 20px;
+   border-radius: 1000px;
+    transition: 0.3s;
+    &:hover{
+        color: #000000;
+        background-color: var(--main);
+        border: 2px solid var(--main);
+        box-shadow:  0 0 30px var(--main);
+    }
+}
+footer {
+    background-color: black;
+    padding: 50px 0px 120px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(17, 17, 17);
+  
+
+}
+
+footer h1 {
+    text-align: center;
+    font-size: 4rem;
+    color: white;
+
+}
+
+.input-container {
+    display: flex;
+    gap: 40px;
+    max-width: 100%;
+    width: 10000px;
+    align-items: center;
+    height: 300px;
+    justify-content: center;
+  
+}
+
+#icon {
+    font-size: 20rem; /* Large size for the "@" */
+    color: white;
+    display: flex;
+    border: 2px solid var(--main);
+  
+    justify-content: center;
+    align-items: center;
+}
+
+.input-boxes {
+  
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%; /* Adjust width as needed */
+}
+
+.input-boxes input {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    background-color: transparent;
+    border: 2px solid var(--main);
+    color: white;
+    border-radius: 9px;
+    outline: none;
+    height: 25px;
+    box-shadow: 0 0 5px var(--main);
+    
+}
+.contact-btn{
+   padding: 20px 30px 20px 30px;
+    border: 2px solid var(--main);
+    border-radius: 100px;
+    font-size: 1rem;
+    transition: 0.4s ease;
+    color: var(--main);
+    background-color: transparent;
+    cursor: pointer;
+    &:hover{
+        background-color: var(--main);
+        box-shadow: 0 0 30px var(--main);
+        color: black;
+    }
+}
+#skill-section, #home-sec, #project-sec, footer {
+    scroll-margin-top: 100px; 
+  }
+@media (max-width: 1200px) {
+    nav{
+        
+    }
+    header {
+        padding: 130px 10px;
+    }
+
+    header h1 {
+        font-size: 3.5rem;
+    }
+
+    header h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    header {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .social-container {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    header h1 {
+        margin-top: 0;
+        font-size: 10vw;
+    }
+
+    header h2 {
+        font-size: 1.3rem;
+    }
+
+   
+}
+
+@media (max-width: 900px) {
+    header h1 {
+        font-size: 7vw;
+    }
+
+    header h2 {
+        font-size: 5vw;
+    }
+
+   
+}
+
+@media (max-width: 887px) {
+    header h1 {
+        font-size: 8vw;
+    }
+
+    header h2 {
+        font-size: 6vw;
+    }
+
+    header p {
+        font-size: 4vw;
+    }
+
+  
+}
+
+@media (max-width: 868px) {
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 9vw;
+    }
+
+    header h2 {
+        font-size: 5vw;
+    }
+
+    header p {
+        font-size: 3.5vw;
+    }
+
+
+    .project1 {
+        width: 250px;
+        height: 400px;
+    }
+
+    .project1 h1 {
+        font-size: 1.8rem;
+    }
+
+    .project1 p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+  
+
+    .skill-container ul li {
+        font-size: 1.5rem;
+    }
+
+    
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 6vw;
+    }
+
+    header h2 {
+        font-size: 4vw;
+    }
+
+    header p {
+        font-size: 3vw;
+    }
+
+    
+    .skill-container ul li {
+        font-size: 1.2rem;
+    }
+
+    .project1 {
+        width: 220px;
+        height: 370px;
+    }
+
+    .project1 h1 {
+        font-size: 1.5rem;
+    }
+
+    .project1 p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 573px) {
+    .links-container{
+      
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 10;
+        width: 300px;
+        background-color: black;
+        box-shadow: -5px 5px rgba(0, 0, 0, 0.25);
+        transition: 0.4s ease-out;
+        justify-content: flex-start;
+        margin-right: 0;
+        height: 100%;
+        margin-top: 0;
+    }
+    .links-container ul li:first-child{
+        margin-right: 0;
+    }
+    footer h1 {
+        text-align: center;
+        font-size: 3.5rem;
+        color: white;
+    
+    }
+       
+    .input-boxes input{
+        width: 80%;
+     
+        
+    }
+        
+    
+    nav ul  {
+        flex-direction: column;
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 20px 30px;
+        justify-content: flex-start;
+    }
+    .open-sidebar-button, .close-sidebar-button{
+        display: block;
+        padding:  20px;
+    }
+    #sidebar-active:checked ~ .links-container{
+       right: 0;
+
+    }
+    header h1 {
+        font-size: 5vw;
+    }
+
+    header h2 {
+        font-size: 3vw;
+    }
+
+    header p {
+        font-size: 2.5vw;
+    }
+
+
+    .skill-container ul li {
+        font-size: 1rem;
+    }
+
+    .project1 {
+        width: 280px;
+        height: 390px;
+    }
+
+    .project1 h1 {
+        font-size: 1.2rem;
+    }
+
+    .project1 p {
+        font-size: 0.9rem;
+    }
+}
+
+
+@media (max-width: 200px) {
+    header {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 4vw;
+    }
+
+    header h2 {
+        font-size: 2vw;
+    }
+
+    header p {
+        font-size: 2vw;
+    }
+
+    header img {
+        height: 5vh;
+    }
+
+    .skill-container ul li {
+        font-size: 0.8rem;
+    }
+
+    .project1 {
+        width: 150px;
+        height: 250px;
+    }
+
+    .project1 h1 {
+        font-size: 1rem;
+    }
+
+    .project1 p {
+        font-size: 0.7rem;
+    }
+}
